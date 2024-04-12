@@ -28,6 +28,260 @@ body {
 	margin: 0 auto; /* pruh je na stránce vycentrovaný */
 	background: white;
 	box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+	
+	
 }
 
 /* ----- zde začni psát vlastní CSS ----- */
+
+/*Stylování menu*/
+.menu {
+	display: flex;
+	font-size: 16px;
+	width: 100%;
+	margin-bottom: 15px;
+	}
+
+ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	flex: 0 0 50%;
+	text-align: center;
+}
+
+.hidden {
+	display: none;
+}
+
+a {
+	display: inline-block;
+	text-decoration: none;
+	height: 100%;
+	width: 100%;
+	margin: 0;
+	padding: 10px 0;
+	color: black;	
+	background-color: #f1f0f0;
+	
+}
+
+.menu a:hover {
+	background-color:  #25133d;
+	color: white;
+	
+}
+
+.menu a::after :hover {
+	display: none;
+}
+
+/*Hero sekce*/
+
+.hero {
+	background-image: url(images/pozadi.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;	
+	color: white;
+	text-align: center;
+	width: 100%;
+	height:100vh;
+}
+
+h1 {
+	color: white;
+	text-align: center;
+	font-size: 50px;
+	margin: 0;
+	font-weight: 400;
+	
+}
+
+.hero p {
+	font-size: 20px;
+	font-weight: 300;
+	margin: 0;
+}
+
+.hero button {
+	font-size: 15px;
+	background-color: transparent;
+	border: 1px solid white;
+	border-radius: 4px;	
+	padding: 0 10px;
+}
+
+.heroButtons {
+	display: flex;
+	width: 100%;
+	justify-content: space-around;
+	margin-top: 20px;
+
+}
+.button a {
+	background-color: transparent;
+	width: 100%;
+	color:white;	
+}
+
+.hero .button:hover {
+	background-color: #48418e;
+	box-shadow: 5px 5px 10px rgb(65, 64, 64);	
+}
+
+.phone {
+	height: 50%;
+	position: absolute;
+	right: 0px;
+	bottom: 0px;		
+}
+
+.services {
+	margin: 50px auto ;
+	padding: 0 10px;
+	text-align: center;
+}
+
+.services img {
+	width: 100px;
+}
+
+h2 {
+	margin-top: 30px;
+	font-size: 20px;
+	color: #48418e;
+}
+
+.services p {
+	margin: 0 auto 30px auto;
+	max-width: 500px;
+}
+
+footer {
+	width: 100%;
+	height: 50px;
+	background-color: #321a52;
+	line-height: 50px;
+	color: white;
+	text-align: center;
+}
+
+@media only screen and (min-width: 470px) {
+	.heroButtons {
+		flex-direction: column ;
+		justify-content: center;
+		position: absolute;
+		bottom: 50px;
+		left: 5%;
+		gap: 50px;
+		width: 30%;
+	}
+	.hero p {
+		margin-top: 40px;
+		font-size: 25px;
+	}
+	h1 {
+		font-size: 60px;
+	}
+}
+
+@media only screen and (min-width: 640px) {
+	h1 {
+		font-size: 70px;
+	}
+
+	.hero p {
+		font-size: 36px;
+		text-align: left;
+		padding-left: 8%;
+	}
+
+	.heroButtons {
+		left: 8%;
+	}
+
+	.phone {
+		height: 5;
+	}
+
+	.hidden {
+		display: inline-block;
+		color: black;
+		
+	}
+
+	.logo {
+		padding: 10px 0;
+		background: #f1f0f0;
+	}
+
+	li {
+		flex: 0 0 25%;
+		
+	}
+}
+
+@media only screen and (min-width: 1040px) {
+	.hero {
+		min-height: 350px;
+		max-height: 75vh;
+	}
+
+	.menu {
+		margin-bottom: 20px;
+	}
+
+	.phone {
+		height: 80%;
+	}
+
+	h1 {
+		font-size: 90px;
+		text-align: left;
+		padding: 0;	
+		margin: 0;	
+	}
+
+	.heroContent {
+		display: flex;
+		flex-direction: column;
+		
+		justify-content: center;
+		padding-left: 50px;
+		gap: 20px;
+	}
+
+	.heroButtons {
+		flex-direction: row;
+		width: 100%;
+		justify-content: flex-start;
+		gap: 30px;
+		left: 0;
+		bottom: 0;
+		position: unset;		
+	}
+
+	.hero p {
+		margin: 0;
+		padding: 0;
+	}
+
+	.hero a {
+		font-size: 20px;
+	}
+
+	.services {
+		display: flex;
+		justify-content: space-between;
+		gap: 20px;
+		width: 100%;
+	}
+
+	.card {
+		flex: 0 0 calc((100% - 60px) / 3)
+	}
+}
